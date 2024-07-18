@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+ float tamanho,compra;
+ 
+ printf("Digite o tamanho do cômodo (em metro): ");
+ scanf("%f",&tamanho);
+ 
+ compra = tamanho/4;
+
+ printf("%f",ceil(compra));
+
+}

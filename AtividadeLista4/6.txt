@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdbool.h>
+
+int main() {
+    char repetir;
+    do {
+        int tamanho = 20;
+        int vetor[tamanho];
+        
+        srand(time(NULL));
+        for (int i = 0; i < tamanho; i++) {
+            vetor[i] = rand() % 200 + 1;
+        }
+        
+        printf("Vetor gerado: ");
+        for (int i = 0; i < tamanho; i++) {
+            printf("%d ", vetor[i]);
+        }
+        printf("\n");
+
+        bool tem_primo = false;
+        
+        printf("\nNúmeros primos: ");
+        for (int i = 0; i < tamanho; i++) {
+            bool primo = true;
+            if (vetor[i] <= 1) {
+                primo = false;
+            } 
+            else {
+                for (int j = 2; j * j <= vetor[i]; j++) {
+                    if (vetor[i] % j == 0) {
+                        primo = false;
+                        break;
+                    }
+                }
+            }
+            if (primo) {
+                printf("%d ", vetor[i]);
+                tem_primo = true;
+            }
+        }
+        if (!tem_primo) {
+            printf("Não há números primos nesse vetor");
+        }
+        printf("\n");
+        
+        printf("\nDeseja repetir o processo? (s/n): ");
+        scanf(" %c", &repetir);
+    } while (repetir == 's' || repetir == 'S');
+    
+    return 0;
+}
+
+

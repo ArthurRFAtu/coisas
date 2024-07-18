@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, z, x, y;
+
+   
+    printf("Informe o valor de a: ");
+    scanf("%d", &a);
+    printf("Informe o valor de b: ");
+    scanf("%d", &b);
+    printf("Informe o valor de z: ");
+    scanf("%d", &z);
+  
+   
+    while (b <= a) {
+        printf("O valor de b deve ser maior que a. Informe novamente o valor de b: ");
+        scanf("%d", &b);
+    }
+    
+    while (z <= b) {
+        printf("O valor de z deve ser maior que b. Informe novamente o valor de z: ");
+        scanf("%d", &z);
+    }
+     x = b;
+    y = z - x;
+
+    printf("x = %d, y = %d\n", x, y);
+
+    return 0;
+}

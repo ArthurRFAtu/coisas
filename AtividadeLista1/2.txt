@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+   int hor,min,seg;
+   
+   printf("Digite suas horas em segundos para ser convertida: \t");
+   scanf("%d",&seg);
+   
+   hor=seg/3600;
+   min=(seg%3600)/60;
+   seg=(seg%3600)%60;
+   
+   printf(" %d : %d : %d",hor,min,seg);
+}
+

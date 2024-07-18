@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int tamanho = 15;
+    int vetor[tamanho];
+    int i, numero, maior, menor, soma = 0;
+    float media;
+
+    for (i = 0; i < tamanho; i++) {
+        do {
+            printf("Informe o %dº número (entre 0 e 20): ", i + 1);
+            scanf("%d", &numero);
+        } while (numero < 0 || numero > 20);
+        vetor[i] = numero;
+        soma += numero;
+        if (i == 0 || numero > maior) {
+            maior = numero;
+        }
+        if (i == 0 || numero < menor) {
+            menor = numero;
+        }
+    }
+    media = (float)soma / tamanho;
+    
+    printf("\nNúmeros informados:\n");
+    for (i = 0; i < tamanho; i++) {
+        printf("%d ", vetor[i]);
+    }
+    printf("\n");
+
+    printf("\nMaior número: %d\n", maior);
+    printf("Posição do maior número:");
+    for (i = 0; i < tamanho; i++) {
+        if (vetor[i] == maior) {
+            printf(" %d", i);
+        }
+    }
+    printf("\n");
+
+    printf("\nMenor número: %d\n", menor);
+    printf("Posição do menor número:");
+    for (i = 0; i < tamanho; i++) {
+        if (vetor[i] == menor) {
+            printf(" %d", i);
+        }
+    }
+    printf("\n");
+    
+    printf("\nMédia aritmética: %.2f\n", media);
+    return 0;
+}

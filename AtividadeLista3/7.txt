@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int numero, i, fator;
+
+    do {
+        printf("Informe um numero maior que 50 e menor que 1000: ");
+        scanf("%d", &numero);
+    } while (numero <= 50 || numero >= 1000);
+
+   
+    printf("Fatores primos de %d sao: ", numero);
+
+    
+    for (i = 2; numero > 1; i++) {
+        while (numero % i == 0) {
+            printf("%d ", i);
+            numero /= i;
+            if (numero > 1) {
+                printf("x ");
+            }
+        }
+    }
+}

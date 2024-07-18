@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  float valor,aulasDadas,percentual,desconto,liquido;
+  printf("Digite o valor da aula:");
+  scanf("%f",&valor);
+  printf("Digite o número de aulas dadas: ");
+  scanf("%f",&aulasDadas);
+  printf("Digite o valor do percentual do Inss: ");
+  scanf("%f",&percentual);
+  
+  desconto = valor*aulasDadas*(percentual/100);
+  liquido = valor*aulasDadas-desconto;
+  
+  printf("O salario liquido é:R$%.2f",liquido);
+}

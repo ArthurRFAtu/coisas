@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   float velocMax,velocMoto,multa;
+   printf("Digite a velocidade máxima da avenida: ");
+   scanf("%f",&velocMax);
+   printf("Digite a velocidade do motorista: ");
+   scanf("%f",&velocMoto);
+   if(velocMax>=velocMoto){
+       printf("Não à multa.");
+   }else if(velocMax<velocMoto){
+       multa = ceil((velocMoto - velocMax) * 5);
+       printf("A multa é de: %.2f",multa);
+   }
+   
+}

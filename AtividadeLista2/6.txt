@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+   int placarA,placarB,palpiteA,palpiteB,pontos=0;
+   printf("Informe o placar real: ");
+   scanf("%d %d",&placarA,&placarB);
+   printf("Informe o palpite: ");
+   scanf("%d %d",&palpiteA,&palpiteB);
+   if( placarA == palpiteA){
+       pontos += 5;
+   } if (placarB=palpiteB){
+       pontos += 5;
+   }
+   if((placarA > placarB && palpiteA > palpiteB)||(placarB > placarA && palpiteB > palpiteA)||(placarB == placarA && palpiteB == palpiteA)){
+       pontos += 10;
+   }
+   printf("Você marcou: %d pontos ",pontos);
+}

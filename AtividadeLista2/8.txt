@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+   char a;
+   float altura,pesoIdeial;
+   printf("Digite sua altura: ");
+   scanf("%f",&altura);
+   printf("Digite seu sexo ( 'M' para masculino e 'F' para feminino): ");
+   scanf(" %c",&a);
+   
+   switch (a){
+       case 'M':
+        pesoIdeial = (72.7 * altura) - 58;
+        printf("O peso ideal é: %.2f",pesoIdeial);
+        break;
+       case 'F':
+       pesoIdeial=(62.1 * altura) - 44.7;
+       printf("O peso ideal é: %.2f",pesoIdeial);
+       break;
+      default:
+       printf("Você digitou algo errado, reinicie o código e digite M para masculino e F para feminino");
+       break;
+   }
+}

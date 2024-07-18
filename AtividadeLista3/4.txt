@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+	int start = 10, end = 600, atual, primo =1;
+    
+	for(int i=10; i < 600; i++){
+    		for(int j = 2; j < i; j++){
+        			if(i % j == 0){
+            			primo = 0;
+        			}    
+    		}
+    		if(primo){
+        			printf("%d ", i);
+    		}
+    		primo = 1;
+	}
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+ double gravidade= 9.81,velocidadeInicial,angulo,distancia,a;
+ printf("Velocidade inicial do lançamento em m/s: ");
+ scanf ("%lf",&velocidadeInicial);
+ printf("O ângulo do lançamento em graus: ");
+ scanf ("%lf",&angulo);
+ a=(velocidadeInicial*velocidadeInicial)*sin(((angulo*3.14)/180))/gravidade;
+ printf("%lf",a);
+}

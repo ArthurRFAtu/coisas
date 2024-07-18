@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int num, numPar[30], quantidadePar, numImpar[30], quantidadeImpar, randInt[30];
+    srand(time(NULL));
+    for (int i =0; i < 30; i ++){
+        randInt[i]=rand()%50;
+    }
+    for(int i = 0; i < 20; i++){
+        numPar[i]=-1;
+        numImpar[i]=-1;
+    }
+    for (int i = 0; i < 30; i++){
+        if (randInt[i]%2 == 0){
+            quantidadePar++;
+            numPar[i] = randInt[i];
+
+        }
+    else{
+            quantidadeImpar++;
+            numImpar[i] = randInt[i];
+        }
+    }
+    printf("Dentre os números pseudo-aleatórios gerados, %d sao pares e %d sao impares \n", quantidadePar,quantidadeImpar);
+    printf("dos quais os numeros pares são: ");
+    for(int i=0;i<30;i++){
+        if(numPar[i] != -1){
+            printf("%d ", numPar[i]);
+        }
+    }
+    printf("\ne os numeros impares são: ");
+    for(int i=0;i<30;i++){
+        if(numImpar[i] != -1 && numImpar[i] != 0){
+            printf("%d ", numImpar[i]);
+        }
+    }
+    
+}

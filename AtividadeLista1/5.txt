@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float consumo,distancia,desempenho=15,tempo,velocidade;
+    printf("Digite o tempo de viagem em horas: ");
+    scanf("%f",&tempo);
+    printf("Agora digite a velocidade média em Km/h: ");
+    scanf("%f",&velocidade);
+    distancia = tempo*velocidade;
+    consumo= distancia/desempenho;
+    printf("O consumo de combustível nessa viagem é: %f",consumo);
+}

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int nums[6], i;
+    float media1 = 0, media2 = 0, somaMedidas;
+
+    printf("Digite os seis números:\n");
+    for (i = 0; i < 6; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &nums[i]);
+    }
+
+    for (i = 0; i < 3; i++) {
+        media1 += nums[i];
+    }
+    media1 /= 3;
+    
+    for (i = 3; i < 6; i++) {
+        media2 += nums[i];
+    }
+    media2 /= 3;
+    
+    somaMedidas = media1 + media2;
+
+    printf("\nA média dos três primeiros números: %.2f\n", media1);
+    printf("A média dos três últimos números: %.2f\n", media2);
+    printf("A soma das médias: %.2f\n", somaMedidas);
+
+}
+

@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+int main()
+{
+srand(time(NULL));
+ int quant, i, j, aux, grupos, resto, total = 0;
+ quant = rand() % 13 + 3;
+ int chocolate[quant];
+ printf("Valores dos chocolates gerados: ");
+ for(i = 0; i < quant; i++){
+     chocolate[i] = rand() % 9 + 2;
+     printf("(%d)",chocolate[i]);
+ }
+ for(i = 0; i < quant; i++){
+     for(j = 0;j < quant -1;j++ ){
+         if(chocolate[j] < chocolate[j + 1]){
+             aux = chocolate[j];
+             chocolate[j]=chocolate[j+1];
+             chocolate[j+1]=aux;
+         }
+         
+ }
+ }
+ printf("\nValores dos chocolates gerados ordenados: ");
+ for(i = 0; i < quant; i++){
+     printf("(%d)",chocolate[i]);
+ }
+ resto = quant % 3;
+ grupos = quant - resto;
+ for(i = 0; i < grupos; i+=3){
+     total = total + chocolate[i] + chocolate[i + 1];
+ }
+ while(resto > 0){
+     total += chocolate[quant - resto];
+     resto--;
+ }
+ printf("\n Total a pagar: R$ %d,00",total);
+ 
+}

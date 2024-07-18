@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float salTotal, horas, valorH;
+    const float bon1=40.0, porCent1 = 1.50, bon2 = 60.0, porCent2 = 2.0;
+    printf("Digite a quantidade de horas trabalhadas: ");
+    scanf("%f",&horas);
+    printf("Digite o valor das horas: ");
+    scanf("%f",&valorH);
+    if(horas<=bon1){
+        printf("Seu salario sera igual a RS%.2f",horas*valorH);
+    }
+    if(horas>bon1 && horas<=bon2){
+        salTotal = ((horas - bon1)*valorH*porCent1) + (bon1*valorH);
+        printf("Seu salario sera igual a RS%.2f",salTotal);
+    }else{
+        salTotal = (horas - bon2)*valorH*porCent2 + (bon2-bon1)*porCent1*valorH + bon1 *valorH;
+        printf("Seu salario sera igual a RS%.2f",salTotal);
+    }
+}

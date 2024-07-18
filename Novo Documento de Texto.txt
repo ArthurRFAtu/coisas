@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int mo, fn, fm, i = 0;
+
+    while (1) {  
+        printf("Qual idade de Mônica: ");
+        scanf("%d", &mo);
+        if (mo >= 40 && mo <= 110) { 
+            break;
+        } else {
+            printf("Digite a idade novamente\n");
+        }
+    }
+    
+    do{
+     printf("Digite a idade de dois filhos: ");
+           scanf("%d %d", &fn,&fm);
+    }while(fn<1||fn>=mo||fn==fm);
+    int a;
+    a = mo - (fn + fm);
+     if (fn > fm && fn > a) {
+        printf ("O filho mais velho tem: %d", fn);
+    } else if (fm > fn && fm > a) {
+        printf ("O filho mais velho tem: %d", fm); 
+    } else {
+    printf("O filho mais velho tem: %d", a);
+    }
+
+
+}

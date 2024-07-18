@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+   int num1;
+   printf("Digite um numero para saber seu sucessor e seu antecessor: ");
+   scanf("%d",&num1);
+   
+   printf("Antecessor: %d\n Sucessor: %d",num1-1,num1+1);
+
+}

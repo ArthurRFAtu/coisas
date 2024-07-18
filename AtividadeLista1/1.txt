@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+   int num1,dec,cent,mili;
+   
+   printf("Digite um número para ser convertido: \t");
+   scanf("%d",&num1);
+   
+   dec= num1*10;
+   cent=num1*100;
+   mili=num1*1000;
+   
+   printf("Seu valor em Decimentro: %d\nCentimetros: %d\nMilimetros: %d ",dec,cent,mili);
+}
